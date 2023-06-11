@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+    background: #F5F7FB;
+}
+*{
+    box-sizing: border-box;
+    cursor: default;
+}
+main{
+    height: 100svh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.startMenu > h1{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    text-align: center;
+    color: #293264;
+    margin: 0;
+}
+.startMenu > p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #293264;
+    margin: 12px 0 16px 0;
+} 
+.startMenu > button{
+    height: 52px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #F5F7FB;
+    background: #4D5B9E;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    width: 100%;
+}
+.question{
+    border-bottom: 1px solid #dbdef0;
+    padding: 24px 0;
+    max-width: 800px;
+}
+.question > h2 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 0 24px 0;
+    color: #293264;
+}
+.question > .answer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+.question > .answer > button{
+    padding:4px 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #293264;
+    background: none;
+    border: 1px solid #4D5B9E;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.quiz button{
+    display: block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #F5F7FB;
+    background: #4D5B9E;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    padding:16px;
+}
+.quiz > .bottom {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin:24px auto 0 auto;
+}
+.quiz > .bottom > h3{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 24px 0 0 ;
+    color: #293264;
+}
+.loading{
+    display: block;
+    margin: 0 auto;
+    height:100px;
+    width: 100px;
+}
