@@ -11,22 +11,31 @@ export default function Quiz(){
         if(isStartPossible.current){
             fetch('https://opentdb.com/api.php?amount=5&type=multiple')
             .then(res=>res.json())
-            .then(data=>setUserAnswers(data.results))
+            // .then(data=>setUserAnswers(data.results))
+            .then(data=>data.map((element)=>(
+                {
+                    ...element,
+                    userAnswer:'',
+                    answers:mixAnswer(element.incorrect_answers,element.correct_answer),
+                    id:nanoid()
+                }
+            ))
+            .then(data=>setQuizData(data)))
             isStartPossible.current=false
             
         }
     },[quizData])
-    function setUserAnswers(data){
-        const newArray=data.map((element)=>(
-            {
-                ...element,
-                userAnswer:'',
-                answers:mixAnswer(element.incorrect_answers,element.correct_answer),
-                id:nanoid()
-            }
-        ))
-        setQuizData(newArray)
-    }
+    // function setUserAnswers(data){
+    //     const newArray=data.map((element)=>(
+    //         {
+    //             ...element,
+    //             userAnswer:'',
+    //             answers:mixAnswer(element.incorrect_answers,element.correct_answer),
+    //             id:nanoid()
+    //         }
+    //     ))
+    //     setQuizData(newArray)
+    // }
     function changeUserAnswer(questionId,answer){
         if(!isChecked){
             setQuizData(prevState=>prevState.map(question=>(
