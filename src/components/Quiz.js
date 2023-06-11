@@ -13,6 +13,7 @@ export default function Quiz(){
             .then(res=>res.json())
             .then(data=>setUserAnswers(data.results))
             isStartPossible.current=false
+            
         }
     },[quizData])
     function setUserAnswers(data){
@@ -76,8 +77,8 @@ export default function Quiz(){
     }
     return(
         <>
-        {quizData.length===0 && <img className="loading" src="../images/loading.gif"/>}
-        {quizData.length!=0 && 
+        {quizData.length===0 && <img className="loading" src="../images/loading.gif" alt="loading"/>}
+        {quizData.length!==0 && 
             <div className="quiz">
                 {questions}
                 <div className="bottom">
