@@ -2,6 +2,7 @@ import { useEffect,useState,useRef} from "react"
 import Question from "./Question"
 import {nanoid} from "nanoid"
 import he from "he"
+import loading from "../images/Loading.gif"
 export default function Quiz(){
     const isStartPossible=useRef(true) 
     const [quizData,setQuizData]=useState([])
@@ -79,7 +80,7 @@ export default function Quiz(){
     }
     return(
         <>
-        {quizData.length===0 && <img className="loading" src="../images/loading.gif" alt="loading"/>}
+        {quizData.length===0 && <img className="loading" src={loading} alt="loading"/>}
         {quizData.length!==0 && 
             <div className="quiz">
                 {questions}
