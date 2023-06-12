@@ -13,6 +13,7 @@ main{
     display: flex;
     justify-content:center;
     align-items:center;
+    padding: 0 2%;
 }
 .startMenu > h1{
     font-family: 'Karla';
@@ -56,8 +57,8 @@ main{
     font-family: 'Karla';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    margin: 0 0 24px 0;
+    font-size: 22px;
+    margin: 0 0 16px 0;
     color: #293264;
 }
 .question > .answer{
@@ -66,7 +67,7 @@ main{
     gap: 16px;
 }
 .question > .answer > button{
-    padding:4px 16px;
+    padding:4px 8px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -91,7 +92,7 @@ main{
     cursor: pointer;
     outline: none;
     border:none;
-    padding:16px;
+    padding:8px 16px;
 }
 .quiz > .bottom {
     display: flex;
@@ -103,7 +104,7 @@ main{
     font-family: 'Karla';
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 22px;
     margin: 0 24px 0 0 ;
     color: #293264;
 }
@@ -112,4 +113,50 @@ main{
     margin: 0 auto;
     height:100px;
     width: 100px;
+}
+@media (max-width:800px){
+    .question{
+        padding:12px 0;
+    }
+    .question > h2 {
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 0 16px 0;
+        color: #293264;
+    }
+    .question > .answer > button{
+        padding:4px 4px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .quiz > .bottom > h3{
+        font-size: 16px;
+    }
+    .quiz button{
+        font-size: 14px;
+        padding:8px 16px;
+    }
+}
+@media (max-width:500px){
+    .question{
+        padding:12px 0;
+    }
+    .question > h2 {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 0 0 16px 0;
+        color: #293264;
+    }
+    .question > .answer > button{
+        padding:4px 4px;
+        font-size: 10px;
+        border-radius: 8px;
+    }
+    .quiz > .bottom > h3{
+        font-size: 14px;
+    }
+    .quiz button{
+        font-size: 12px;
+        padding:4px 8px;
+    }
 }
