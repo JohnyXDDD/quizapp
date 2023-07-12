@@ -1,4 +1,4 @@
-export default function StartMenu({startGame}){
+export default function StartMenu({ startGame }) {
     return (
         <div className="startMenu">
             <h1>Quizzical</h1>
