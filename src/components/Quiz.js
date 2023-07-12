@@ -16,8 +16,6 @@ export default function Quiz(){
             isStartPossible.current=false
             
         }
-        //trzeba
-        // eslint-disable-next-line
     },[quizData])
     function setUserAnswers(data){
         const newArray=data.map((element)=>(
